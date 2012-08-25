@@ -1,0 +1,373 @@
+/*
+	Theme Name: WordCamp Chicago
+	Theme URI: http://thomasgriffinmedia.com/
+	Description: Custom presentation theme for WordCamp Chicago.
+	Author: Thomas Griffin
+	Author URI: http://thomasgriffinmedia.com/
+	Version: 1.0.0
+
+	License: GNU General Public License v2.0 (or later)
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* CSS Reset (Eric Meyer)
+------------------------------------------------------------ */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* Defaults
+------------------------------------------------------------ */
+
+body,
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+select,
+textarea {
+	color: #6b6b6b;
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.625;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+strong {
+	font-weight: 600;
+}
+
+em {
+	font-style: italic;
+}
+
+code {
+	background: #fefeec;
+	font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+
+h3 {
+	color: #162937;
+	font-size: 24px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+	width: 0 !important;
+}
+
+
+/* Clearfixes
+------------------------------------------------------------ */
+
+#wrap:after,
+#presentation:after,
+#sample-plugin-query:after,
+#footer .wrap:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	overflow: auto;
+	visibility: hidden;
+}
+
+
+/* Body
+------------------------------------------------------------ */
+
+body {
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+/* Header 
+------------------------------------------------------------ */
+
+#header {
+	background: #ff3700;
+	left: 0;
+	padding: 5px 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+#header #title {
+	color: #fff;
+	font-size: 52px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+
+/* Presentation
+------------------------------------------------------------ */
+
+#presentation {
+	margin-top: 114px;
+	position: relative;
+	width: 100%;
+}
+
+#presentation .wrap {
+	margin: 0 20px;
+	position: relative;
+}
+
+
+/* Slide
+------------------------------------------------------------ */
+
+#slide {
+	position: relative;
+}
+
+#slide-count {
+	background: #162937;
+	color: #fff;
+	font-size: 14px;
+	height: 32px;
+	line-height: 32px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 94px;
+	width: 65px;
+	z-index: 100;
+}
+
+#slide-link {
+	background: #162937;
+	font-size: 26px;
+	height: 32px;
+	line-height: 34px;
+	position: fixed;
+	left: 0;
+	text-align: center;
+	top: 94px;
+	width: 65px;
+	z-index: 100;
+}
+
+#slide-link a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+}
+
+#copy-notice {
+	background: #fff;
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+	position: fixed;
+	left: 0;
+	opacity: 0;
+	text-align: center;
+	top: 94px;
+	z-index: 60;
+}
+
+#loading {
+	background: url(images/loading.gif) no-repeat scroll 0 0;
+	display: none;
+	height: 16px;
+	position: fixed;
+	right: 75px;
+	top: 102px;
+	width: 16px;
+}
+
+#slide-count span.current {
+	color: #ff3700;
+}
+
+#slide h1 {
+	color: #162937;
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#featured-image {
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+#slide p {
+	margin-bottom: 20px;
+}
+
+#slide a {
+	color: #ff3700;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+#slide ul,
+#slide ol {
+	margin: 0 0 20px 30px;
+}
+
+#slide ul ul,
+#slide ol ol,
+#slide ul ol,
+#slide ol ul {
+	margin-bottom: 0;
+}
+
+#slide ul li {
+	list-style-type: disc;
+}
+
+#slide ol li {
+	list-style-type: decimal;
+}
+
+#slide .left {
+	float: left;
+	width: 49%;
+}
+
+#slide .right {
+	float: right;
+	width: 49%;
+}
+
+#slide .gist {
+	font-size: 14px;
+	padding-bottom: 58px;
+}
+
+.tweet {
+	background: url(images/twitter.png) no-repeat scroll 0 50%;
+	margin: 0 auto;
+	padding: 50px 0;
+	width: 75%;
+}
+
+.tweet p {
+	font-size: 36px;
+	font-style: italic;
+	margin-left: 200px;
+	text-align: center;
+}
+
+#previous-slide,
+#next-slide {
+	display: none;
+}
+
+
+/* Plugin Query Area
+------------------------------------------------------------ */
+
+#sample-plugin-query {
+	margin: 20px 0;
+}
+
+#sample-plugin-query .left {
+	width: 35%;
+}
+
+#sample-plugin-query .left input {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#sample-plugin-query .right {
+	width: 62%;
+}
+
+#query-api {
+	cursor: pointer;
+	margin: 0 0 0 5px;
+	vertical-align: middle;
+}
+
+.waiting {
+	background: url(images/loading.gif) no-repeat scroll 0 0;
+	display: inline-block;
+	height: 16px;
+	margin-left: 5px;
+	text-indent: -9999px;
+	width: 16px;
+	vertical-align: middle;
+}
+
+.plugin-info {
+	padding-bottom: 53px;
+}
+
+
+/* Footer
+------------------------------------------------------------ */
+
+#footer {
+	background: #162937;
+	bottom: 0;
+	height: 50px;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+#footer .wrap {
+	margin: 0 5px;
+}
+
+#footer p {
+	color: #fff;
+	float: left;
+	font-size: 14px;
+	line-height: 50px;
+	text-align: center;
+	width: 34%;
+}
+
+#footer p.first {
+	width: 32%;
+}
+
+#footer a {
+	color: #ff3700;
+	font-weight: 600;
+}
+
+
+/* Github Gist Styling
+------------------------------------------------------------ */
+
+.gist{color:#000}.gist div{padding:0;margin:0}.gist .gist-file{border:1px solid #dedede;font-family:Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;margin-bottom:1em}.gist .gist-file .gist-meta{overflow:hidden;font-size:85%;padding:.5em;color:#666;background-color:#eaeaea}.gist .gist-file .gist-meta a{color:#369}.gist .gist-file .gist-meta a:visited{color:#737}.gist .gist-file .gist-data{overflow:auto;word-wrap:normal;background-color:#f8f8ff;border-bottom:1px solid #ddd;font-size:100%}.gist .gist-file .gist-data pre{font-family:'Bitstream Vera Sans Mono','Courier',monospace;background:transparent!important;margin:0!important;border:none!important;padding:.25em .5em .5em .5em!important}.gist .gist-file .gist-data .gist-highlight{background:transparent!important}.gist .gist-file .gist-data .gist-line-numbers{background-color:#ececec;color:#aaa;border-right:1px solid #ddd;text-align:right}.gist .gist-file .gist-data .gist-line-numbers span{clear:right;display:block}.gist-syntax{background:#fff}.gist-syntax .c{color:#998;font-style:italic}.gist-syntax .err{color:#a61717;background-color:#e3d2d2}.gist-syntax .k{color:#000;font-weight:bold}.gist-syntax .o{color:#000;font-weight:bold}.gist-syntax .cm{color:#998;font-style:italic}.gist-syntax .cp{color:#999;font-weight:bold}.gist-syntax .c1{color:#998;font-style:italic}.gist-syntax .cs{color:#999;font-weight:bold;font-style:italic}.gist-syntax .gd{color:#000;background-color:#fdd}.gist-syntax .gd .x{color:#000;background-color:#faa}.gist-syntax .ge{color:#000;font-style:italic}.gist-syntax .gr{color:#a00}.gist-syntax .gh{color:#999}.gist-syntax .gi{color:#000;background-color:#dfd}.gist-syntax .gi .x{color:#000;background-color:#afa}.gist-syntax .go{color:#888}.gist-syntax .gp{color:#555}.gist-syntax .gs{font-weight:bold}.gist-syntax .gu{color:#aaa}.gist-syntax .gt{color:#a00}.gist-syntax .kc{color:#000;font-weight:bold}.gist-syntax .kd{color:#000;font-weight:bold}.gist-syntax .kp{color:#000;font-weight:bold}.gist-syntax .kr{color:#000;font-weight:bold}.gist-syntax .kt{color:#458;font-weight:bold}.gist-syntax .m{color:#099}.gist-syntax .s{color:#d14}.gist-syntax .na{color:#008080}.gist-syntax .nb{color:#0086b3}.gist-syntax .nc{color:#458;font-weight:bold}.gist-syntax .no{color:#008080}.gist-syntax .ni{color:#800080}.gist-syntax .ne{color:#900;font-weight:bold}.gist-syntax .nf{color:#900;font-weight:bold}.gist-syntax .nn{color:#555}.gist-syntax .nt{color:#000080}.gist-syntax .nv{color:#008080}.gist-syntax .ow{color:#000;font-weight:bold}.gist-syntax .w{color:#bbb}.gist-syntax .mf{color:#099}.gist-syntax .mh{color:#099}.gist-syntax .mi{color:#099}.gist-syntax .mo{color:#099}.gist-syntax .sb{color:#d14}.gist-syntax .sc{color:#d14}.gist-syntax .sd{color:#d14}.gist-syntax .s2{color:#d14}.gist-syntax .se{color:#d14}.gist-syntax .sh{color:#d14}.gist-syntax .si{color:#d14}.gist-syntax .sx{color:#d14}.gist-syntax .sr{color:#009926}.gist-syntax .s1{color:#d14}.gist-syntax .ss{color:#990073}.gist-syntax .bp{color:#999}.gist-syntax .vc{color:#008080}.gist-syntax .vg{color:#008080}.gist-syntax .vi{color:#008080}.gist-syntax .il{color:#099}
+
+
+/* Github Button Styling
+------------------------------------------------------------ */
+
+.button{position:relative;top:-1px;overflow:visible;display:inline-block;padding:1em 2em;border:1px solid #d4d4d4;margin:0;text-decoration:none;text-align:center;text-shadow:1px 1px 0 #fff;font:11px/normal sans-serif;color:#333 !important;white-space:nowrap;cursor:pointer;outline:0;background-color:#ececec;background-image:-webkit-gradient(linear,0 0,0 100%,from(#f4f4f4),to(#ececec));background-image:-moz-linear-gradient(#f4f4f4,#ececec);background-image:-ms-linear-gradient(#f4f4f4,#ececec);background-image:-o-linear-gradient(#f4f4f4,#ececec);background-image:linear-gradient(#f4f4f4,#ececec);-moz-background-clip:padding;background-clip:padding-box;border-radius:.2em;zoom:1;*display:inline}.button:hover,.button:focus,.button:active,.button.active{border-color:#3072b3;border-bottom-color:#2a65a0;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);color:#fff !important;background-color:#3c8dde;background-image:-webkit-gradient(linear,0 0,0 100%,from(#599bdc),to(#3072b3));background-image:-moz-linear-gradient(#599bdc,#3072b3);background-image:-o-linear-gradient(#599bdc,#3072b3);background-image:linear-gradient(#599bdc,#3072b3)}.button:active,.button.active{border-color:#2a65a0;border-bottom-color:#3884cd;background-color:#3072b3;background-image:-webkit-gradient(linear,0 0,0 100%,from(#3072b3),to(#599bdc));background-image:-moz-linear-gradient(#3072b3,#599bdc);background-image:-ms-linear-gradient(#3072b3,#599bdc);background-image:-o-linear-gradient(#3072b3,#599bdc);background-image:linear-gradient(#3072b3,#599bdc)}.button::-moz-focus-inner{padding:0;border:0}
